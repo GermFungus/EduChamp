@@ -1,11 +1,21 @@
 import React from "react";
 import './SignUp.css';
 import googleLogo from "../../images/Google-SVG-Logo-Using-GreenSock-Animation.gif"
+import GoogleLogin from 'react-google-login';
 export default class SignUpComponent extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
         }
+        this.responseGoogle=this.responseGoogle.bind(this);
+        this.responseGooglei=this.responseGooglei.bind(this);
+    }
+
+    responseGoogle = (data) =>{
+        this.props.changeState('dashBoard' , true);
+    }
+    responseGooglei = (data) =>{
+        console.log(data);
     }
     render(){
         return (
@@ -23,9 +33,18 @@ export default class SignUpComponent extends React.Component {
                     <div>
                         <h3 className="googleHeading">--------- Or Sign Up With ---------</h3>
                     </div>
-                    <div className="googleButton">
-                        <img src={googleLogo} className="googleLogo"></img>
-                    </div>
+                    
+                    <GoogleLogin
+                        clientId="840746059585-rkuo9f1n8nfjnb8ucmlsbnesm4da96ji.apps.googleusercontent.com"
+                        render={renderProps => (
+                        
+                        <div  className="googleButton" onClick={renderProps.onClick} disabled={renderProps.disabled}><img src={googleLogo} className="googleButton"></img></div>
+                        )}
+                        buttonText="Login"
+                        onSuccess={this.responseGoogle}
+                        onFailure={this.responseGooglei}
+                        cookiePolicy={'single_host_origin'}
+                    />
                 </div>
             </div>
         );
