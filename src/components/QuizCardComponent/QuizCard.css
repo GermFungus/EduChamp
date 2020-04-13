@@ -1,0 +1,39 @@
+.cardDiv{
+    box-sizing: border-box;
+    margin: 20px 5px 20px 5px;
+    border: 2px solid rgb(90, 86, 86);
+    border-radius: 5px;
+    width: 15%;
+}
+
+.QuizName{
+    background-color: rgb(90, 86, 86);
+    padding : 10px;
+}
+h4{
+    margin: 0 !important;
+    text-align: center;
+    font-family: serif;
+    font-weight: 100;
+    color: white;
+}
+
+.content{
+    padding : 20px;
+}
+
+.QuizCardButton{
+    box-sizing: border-box;
+    padding:8px;
+    border: 1px solid rgb(90, 86, 86);
+    border-radius: 5px;
+    margin : 5px 25% 5px 25%;
+    text-align: center;
+}
+
+.QuizCardButton:hover{
+    cursor: pointer;
+    border-color: white;
+    background-color: rgb(90, 86, 86);
+    color: white;
+}
