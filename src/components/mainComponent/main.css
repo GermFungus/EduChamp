@@ -1,0 +1,32 @@
+.first{
+    display: flex;
+    padding: 5px;
+}
+.imageContainer{
+    box-sizing: border-box;
+    width: 70%;
+}
+.imgBox{
+    max-width: 100%;
+    height: auto;
+}
+.formBox{
+    box-sizing: border-box;
+    margin: 5px;
+    width: 30%;
+    border: 1px rgb(90, 86, 86) solid;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.formTitle{
+    width: 40%;
+    margin: 5px 30% 5px 30%;
+}
+.formTitle h3{
+    justify-content: center;
+    margin: 0 !important;
+    padding-left: 20%;
+}
